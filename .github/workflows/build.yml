@@ -44,8 +44,8 @@ jobs:
         if: contains(matrix.platform.container, 'arm')
         uses: docker/setup-qemu-action@v3
 
-      - name: Build (Linux ARM)
-        if: contains(matrix.platform.container, 'arm')
+      - name: Build inside container
+        if: ${{ matrix.platform.container != '' }}
         uses: addnab/docker-run-action@v3
         with:
           image: ${{ matrix.platform.container }}
@@ -61,7 +61,7 @@ jobs:
             ./SDL3-CS/build.sh
 
       - name: Build
-        if: ${{ !contains(matrix.platform.container, 'arm') }}
+        if: ${{ matrix.platform.container == '' }}
         shell: bash
         env:
           NAME: ${{ matrix.platform.name }}

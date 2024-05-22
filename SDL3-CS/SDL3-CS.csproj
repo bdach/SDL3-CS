@@ -53,6 +53,18 @@
       <PackagePath>runtimes/linux-x64/native</PackagePath>
       <Pack>true</Pack>
     </None>
+    <None Include="$(MSBuildThisFileDirectory)..\native\linux-x64\libdecor-0.so">
+      <PackagePath>runtimes/linux-x64/native</PackagePath>
+      <Pack>true</Pack>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\native\linux-x64\libdecor\plugins-1\libdecor-cairo.so">
+      <PackagePath>runtimes/linux-x64/native/libdecor/plugins-1</PackagePath>
+      <Pack>true</Pack>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)..\native\linux-x64\libdecor\plugins-1\libdecor-gtk.so">
+      <PackagePath>runtimes/linux-x64/native/libdecor/plugins-1</PackagePath>
+      <Pack>true</Pack>
+    </None>
     <None Include="$(MSBuildThisFileDirectory)..\native\linux-x86\libSDL3.so">
       <PackagePath>runtimes/linux-x86/native</PackagePath>
       <Pack>true</Pack>
